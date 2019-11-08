@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "windows": {
+      "options": {
+        "shell": {
+          "executable": "bash.exe",
+          "args": ["-c"]
+        }
+      }
+    },
+    "tasks": [
+      {
+        "label": "build hello world on WSL",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-g",
+          "-o",
+          "/home/me/learn/c1/hello.out",
+          "hello.cpp"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [
+          "$gcc"
+        ]
+      }
+    ]
+  }
